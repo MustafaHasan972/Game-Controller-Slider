@@ -24,6 +24,7 @@ body {
 
 .img-box .img-list {
   height: inherit;
+  transform: rotate(-120deg);
 }
 
 .img-list .img-slider {
@@ -34,11 +35,16 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%) rotate(calc(-360deg / 6 * var(--i)));
+  transform: translateY(-50%) rotate(calc(-360deg / 6 * var(--i))) scale(0.8);
+  transform-origin: 650px;
 }
 
 .img-item .item {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.img-item .item img {
+  transform: rotate(calc(360deg / 6 * var(--i))) rotate(120deg);
 }
