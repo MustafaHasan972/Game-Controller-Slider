@@ -19,8 +19,6 @@ body {
   transform: translateY(-50%);
   width: 1300px;
   height: 1300px;
-  border: solid 2px red;
-  border-radius: 50%;
 }
 
 .img-box .img-list {
