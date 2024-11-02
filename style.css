@@ -14,11 +14,12 @@ body {
 
 .img-box {
   position: absolute;
+  left: -53.85%;
   top: 50%;
   transform: translateY(-50%);
   width: 1300px;
   height: 1300px;
-  border: 2px solid red;
+  border: solid 2px red;
   border-radius: 50%;
 }
 
@@ -39,6 +40,12 @@ body {
   transform-origin: 650px;
 }
 
+.img-slider .img-item.active {
+  transform: translateY(-50%) rotate(calc(-360deg / 6 * var(--i))) scale(1)
+    translateX(-63%);
+  z-index: 1;
+}
+
 .img-item .item {
   display: flex;
   justify-content: center;
@@ -47,4 +54,9 @@ body {
 
 .img-item .item img {
   transform: rotate(calc(360deg / 6 * var(--i))) rotate(120deg);
+  filter: blur(8px);
+}
+
+.img-item.active .item img {
+  filter: blur(0);
 }
