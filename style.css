@@ -7,6 +7,11 @@
   font-family: "Monstserrat", sans-serif;
 }
 
+:root {
+  --all-transition: 1s ease;
+  --opacity-transition: 0.3s ease;
+}
+
 body {
   background: #3674be;
   min-height: 100vh;
@@ -28,6 +33,7 @@ body {
 
 .img-list .img-slider {
   height: inherit;
+  transition: var(--all-transition);
 }
 
 .img-slider .img-item {
