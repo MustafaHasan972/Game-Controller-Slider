@@ -54,6 +54,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: var(--all-transition);
 }
 
 .img-item .item img {
