@@ -14,7 +14,10 @@ const slider = () => {
     item.style.transform = `rotate(${indexSlider * -60}deg)`;
   });
 
-  document.querySelector("img-item.active").classList.remove("active");
+  imgItems.forEach((imgItem) => {
+    imgItem.classList.remove("active");
+  });
+
   imgItems[index].classList.add("active");
 };
 
@@ -23,6 +26,7 @@ nextBtn.addEventListener("click", () => {
   index++;
   if (index > imgItems.length - 1) {
     index = 0;
+    indexSlider = 0;
   }
 
   slider();
@@ -33,6 +37,7 @@ prevBtn.addEventListener("click", () => {
   index--;
   if (index < 0) {
     index = imgItems.length - 1;
+    indexSlider = imgItems.length - 1;
   }
 
   slider();
