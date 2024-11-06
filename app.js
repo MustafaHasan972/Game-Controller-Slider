@@ -1,6 +1,7 @@
 const imgSlider = document.querySelector(".img-slider");
 const items = document.querySelectorAll(".item");
 const imgItems = document.querySelectorAll(".img-item");
+const infoItems = document.querySelectorAll(".info-item");
 
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
@@ -19,26 +20,21 @@ const slider = () => {
   });
 
   imgItems[index].classList.add("active");
+
+  document.querySelector(".img-item.active").classList.remove("active");
+  infoItems[index].classList.add("active");
 };
 
 nextBtn.addEventListener("click", () => {
-  indexSlider++;
-  index++;
-  if (index > imgItems.length - 1) {
-    index = 0;
-    indexSlider = 0;
-  }
+  indexSlider = (indexSlider + 1) % imgItems.length;
+  index = (index + 1) % imgItems.length;
 
   slider();
 });
 
 prevBtn.addEventListener("click", () => {
-  indexSlider--;
-  index--;
-  if (index < 0) {
-    index = imgItems.length - 1;
-    indexSlider = imgItems.length - 1;
-  }
+  indexSlider = (indexSlider + imgItems.length - 1) % imgItems.length;
+  index = (index + imgItems.length - 1) % imgItems.length;
 
   slider();
 });

@@ -42,6 +42,7 @@ body {
   top: 50%;
   transform: translateY(-50%) rotate(calc(-360deg / 6 * var(--i))) scale(0.8);
   transform-origin: 650px;
+  transition: var(--all-transition);
 }
 
 .img-slider .img-item.active {
@@ -60,6 +61,7 @@ body {
 .img-item .item img {
   transform: rotate(calc(360deg / 6 * var(--i))) rotate(120deg);
   filter: blur(8px);
+  transition: var(--all-transition);
 }
 
 .img-item.active .item img {
