@@ -14,3 +14,9 @@ nextBtn.addEventListener("click", () => {
 
   slider();
 });
+
+prevBtn.addEventListener("click", () => {
+  indexSlider--;
+
+  slider();
+});
