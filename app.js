@@ -25,4 +25,3 @@ prevBtn.addEventListener("click", () => {
 
   slider();
 });
-slider;
