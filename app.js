@@ -23,5 +23,5 @@ nextBtn.addEventListener("click", () => {
 prevBtn.addEventListener("click", () => {
   indexSlider--;
 
-  slider;
+  slider();
 });
