@@ -6,6 +6,8 @@ const infoItems = document.querySelectorAll(".info-item");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
 
+let colors = ["#3674be", "#d26181", "#ceb13d", "#c6414c", "#171f2b", "#50aa61"];
+
 let indexSlider = 0;
 let index = 0;
 
@@ -21,6 +23,8 @@ const slider = () => {
 
   document.querySelector(".info-item.active").classList.remove("active");
   infoItems[index].classList.add("active");
+
+  document.body.style.background = colors[index];
 };
 
 nextBtn.addEventListener("click", () => {
