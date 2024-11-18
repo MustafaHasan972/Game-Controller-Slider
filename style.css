@@ -15,6 +15,20 @@
 body {
   background: #3674be;
   min-height: 100vh;
+  transition: var(--all-transition);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  left: 3.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 800px;
+  height: 800px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  filter: blur(200px);
 }
 
 .img-box {
