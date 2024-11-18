@@ -23,6 +23,9 @@ nextBtn.addEventListener("click", () => {
   indexSlider++;
 
   index++;
+  if (index > imgItems.length - 1) {
+    index = 0;
+  }
 
   slider();
 });
@@ -31,6 +34,9 @@ prevBtn.addEventListener("click", () => {
   indexSlider--;
 
   index--;
+  if (index < 0) {
+    index = imgItems.length - 1;
+  }
 
   slider();
 });
