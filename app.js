@@ -15,6 +15,7 @@ const slider = () => {
     item.style.transform = `rotate(${indexSlider * -60}deg)`;
   });
 
+  document.querySelector(".img-item.active").classList.remove("active");
   imgItems[index].classList.add("active");
 };
 
