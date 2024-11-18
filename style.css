@@ -90,6 +90,8 @@ body {
   transform: translateX(100%);
   opacity: 0;
   box-shadow: none;
+  transition: transform var(--all-transition), opacity var(--opacity-transition),
+    box-shadow var(--all-transition);
 }
 
 .info-box .info-item.active {
