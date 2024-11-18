@@ -16,6 +16,7 @@ body {
   background: #3674be;
   min-height: 100vh;
   transition: var(--all-transition);
+  overflow: hidden;
 }
 
 body::before {
@@ -151,7 +152,7 @@ body::before {
 }
 
 .colors span:nth-child(5) {
-  background: purple;
+  background: #343c5c;
 }
 
 .colors span:nth-child(6) {
