@@ -129,6 +129,7 @@ body::before {
   height: 30px;
   border-radius: 50%;
   margin-right: 15px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .colors span.active {
@@ -159,6 +160,11 @@ body::before {
   background: seagreen;
 }
 
+.colors span:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
 .info-item p {
   font-size: 16px;
   margin: 20px 0 25px;
@@ -170,13 +176,32 @@ body::before {
   align-items: center;
   width: 180px;
   height: 47px;
-  background: #fff;
+  background: transparent;
+  color: var(--btn-text-color, #ffffff);
   border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  color: #333;
-  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
   font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.info-item .btn:hover {
+  font-size: 21px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 40px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease,
+    transform 0.4s ease-in-out;
+  transform: scale(1.1);
+}
+
+.info-item .btn:active {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .navigation {
@@ -200,4 +225,10 @@ body::before {
   cursor: pointer;
   font-size: 55px;
   color: #fff;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.navigation span:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
 }
